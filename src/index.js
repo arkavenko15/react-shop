@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 
-const h1 = React.createElement("h1",null,"Hello world");
 
-ReactDOM.render(h1,document.getElementById("root"))
+import App from './App'
+
+ReactDOM.render( < App/> , document.getElementById("root"))
