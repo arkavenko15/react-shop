@@ -4,14 +4,7 @@ const ProductList = () =>
 {
     return(
         <>
-            <h1 style={
-                {
-                    color:"white",
-                    fontSize:"30px",
-                    textAlign:"center",
-                    margin:"15px 0px"
-                }
-            }>Product List</h1>
+            <h1 className="page-title">Product List</h1>
         </>
     )
 }
