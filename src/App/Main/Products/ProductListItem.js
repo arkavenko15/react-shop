@@ -12,15 +12,23 @@ const{
     age
 }=user;
 console.log(name)
-const ProductListItem =(props)=>
+const ProductListItem =(
+    {
+        name,
+        description,
+        type,
+        capacity,
+        price
+    }
+)=>
 {
     return(
         <div className="product-list-item">
-            <div className="product-title">{props.name}</div>
-            <div className="product-description">{props.description}</div>
-            <div className="product-features">{props.type}</div>
-            <div className="product-features">Capacity: {props.capacity}</div>
-            <div className="product-price">$ {props.price}</div>
+            <div className="product-title">{name}</div>
+            <div className="product-description">{description}</div>
+            <div className="product-features">{type}</div>
+            <div className="product-features">Capacity: {capacity}</div>
+            <div className="product-price">$ {price}</div>
             <input type="button" className="btn-add-to-cart" value="ADD TO CART"/>
         </div>
     )
