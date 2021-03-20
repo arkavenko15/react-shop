@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ProductList from './ProductList'
 import './ProductListItem.css'
 
@@ -32,5 +33,17 @@ const ProductListItem =(
             <input type="button" className="btn-add-to-cart" value="ADD TO CART"/>
         </div>
     )
+}
+
+ProductListItem.propTypes = {
+    name:PropTypes.string.isRequired,
+    description:PropTypes.string,
+    type:PropTypes.string.isRequired,
+    capacity:PropTypes.number.isRequired,
+    price:PropTypes.number.isRequired,
+}
+ProductListItem.defaultProps =
+{
+    description: "No description..."
 }
 export default ProductListItem
