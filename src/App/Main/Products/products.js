@@ -3,7 +3,7 @@ const products =
     {
         id:1,
         name:"iPhone 8",
-        description:"This is IPhone 8",
+        // description:"This is IPhone 8",
         type:"phone",
         capacity:256,
         price:1300,
