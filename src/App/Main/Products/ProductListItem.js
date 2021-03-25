@@ -37,7 +37,7 @@ const ProductListItem =(
             <div className="product-price">$ {price}</div>
             <div className="product-quantity">
                 <button onClick={()=>setCount(count-1)}>-</button>
-                <input type="text" value={count}></input>
+                <input type="text" value={count} readOnly></input>
                 <button onClick={()=>setCount(count+1)}>+</button>
             </div>
             <input type="button" className="btn-add-to-cart" value="ADD TO CART"/>
