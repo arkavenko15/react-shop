@@ -28,11 +28,18 @@ class ProductListItem extends Component
     }
     changeColor()
     {
-        this.setState((color) =>(
-            {
-                color: "Red"
-            }
-        ))
+        this.setState((prevState) =>(
+                prevState.color ==="Green" ? {color:"Red"} : {color:"Green"}
+                // if(prevState.color==="Green")
+                // {
+                //    return { color:"Red"}
+                // }
+                // else{
+                //     return { color:"Green"}
+                // }
+ 
+            ))
+
     }
     render()
     {
