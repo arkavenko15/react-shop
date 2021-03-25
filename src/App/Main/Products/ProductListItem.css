@@ -46,3 +46,34 @@
     text-align: center;
     margin: 10px 0;
 }
+.product-img
+{
+    padding: 15px 0;
+    background-color: rgba(255,255,255,0.75);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.product-quantity
+{
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.product-quantity input
+{
+    width: 200px;
+}
+.product-quantity button
+{
+    height: 40px;
+    width: 40px;
+
+}
+.product-quantity button:hover
+{
+    background-color: grey;
+    color:#ffffff;
+    border:none;
+
+}

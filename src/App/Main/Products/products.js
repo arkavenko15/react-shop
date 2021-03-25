@@ -7,6 +7,7 @@ const products =
         type:"phone",
         capacity:256,
         price:1300,
+        image:"images/ipad.png",
     },
     {
         id:2,
@@ -15,6 +16,7 @@ const products =
         type:"phone",
         capacity:256,
         price:1400,
+        image:"images/ipad.png",
     },
     {
         id:3,
@@ -23,6 +25,7 @@ const products =
         type:"phone",
         capacity:512,
         price:1600,
+        image:"images/iphone.png",
     },
     {
         id:4,
@@ -31,6 +34,8 @@ const products =
         type:"phone",
         capacity:256,
         price:1200,
+        image: "images/iphone.png",
+
     },
 ]
 export default products
