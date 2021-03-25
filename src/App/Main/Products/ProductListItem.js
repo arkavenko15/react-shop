@@ -6,10 +6,27 @@ import './ProductListItem.css'
 
 
 class ProductListItem extends Component
-{
+{    
+    constructor ()
+    {
+        super();
+        this.onIncrementClick = this.onIncrementClick.bind(this);
+
+    }
+    state = {
+        productCount : 1,
+    }
+    onIncrementClick()
+    {
+        console.log(this);
+        this.setState((prevState)=>({
+            productCount:prevState.productCount + 1
+        }))
+    }
 
     render()
     {
+
         const 
         {
             image,
@@ -23,7 +40,7 @@ class ProductListItem extends Component
     return(
         <div className="product-list-item">
             <div className="product-img">
-                <img src={this.props.image} alt=""/>
+                <img src={image} alt=""/>
             </div>    
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
@@ -32,8 +49,8 @@ class ProductListItem extends Component
             <div className="product-price">$ {price}</div>
             <div className="product-quantity">
                 <button>-</button>
-                <input type="text" value={1} readOnly></input>
-                <button>+</button>
+                <input type="text" value={this.state.productCount} readOnly></input>
+                <button onClick = {this.onIncrementClick}>+</button>
             </div>
             <input type="button" className="btn-add-to-cart" value="ADD TO CART"/>
         </div>
