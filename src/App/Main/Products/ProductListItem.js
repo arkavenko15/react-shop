@@ -1,34 +1,29 @@
-import React,{useState} from 'react'
+import React ,{Component} from 'react'
 import PropTypes from 'prop-types'
 import ProductList from './ProductList'
 import './ProductListItem.css'
 
-const user =
+
+
+class ProductListItem extends Component
 {
-    name: "Ivan",
-    age:20,
-}
-const{
-    name,
-    age
-}=user;
-console.log(name)
-const ProductListItem =(
+
+    render()
     {
-        image,
-        name,
-        description ="No description...",
-        type,
-        capacity,
-        price
-    }
-)=>
-{
-    const [count,setCount] = useState(1);
+        const 
+        {
+            image,
+            name,
+            description ="No description...",
+            type,
+            capacity,
+            price
+        } =this.props;
+        
     return(
         <div className="product-list-item">
             <div className="product-img">
-                <img src={image} alt=""/>
+                <img src={this.props.image} alt=""/>
             </div>    
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
@@ -36,14 +31,30 @@ const ProductListItem =(
             <div className="product-features">Capacity: {capacity}</div>
             <div className="product-price">$ {price}</div>
             <div className="product-quantity">
-                <button onClick={()=>setCount(count-1)}>-</button>
-                <input type="text" value={count} readOnly></input>
-                <button onClick={()=>setCount(count+1)}>+</button>
+                <button>-</button>
+                <input type="text" value={1} readOnly></input>
+                <button>+</button>
             </div>
             <input type="button" className="btn-add-to-cart" value="ADD TO CART"/>
         </div>
     )
+    }
 }
+
+
+// const ProductListItem =(
+//     {
+//         image,
+//         name,
+//         description ="No description...",
+//         type,
+//         capacity,
+//         price
+//     }
+// )=>
+// {
+
+// }
 
 ProductListItem.propTypes = {
     name:PropTypes.string.isRequired,
