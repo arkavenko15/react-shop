@@ -7,16 +7,11 @@ import './ProductListItem.css'
 
 class ProductListItem extends Component
 {    
-    constructor ()
-    {
-        super();
-        this.onIncrementClick = this.onIncrementClick.bind(this);
 
-    }
     state = {
         productCount : 1,
     }
-    onIncrementClick()
+    onIncrementClick = () => 
     {
         console.log(this);
         this.setState((prevState)=>({
