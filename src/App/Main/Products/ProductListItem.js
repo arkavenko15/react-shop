@@ -10,6 +10,7 @@ class ProductListItem extends Component
 
     state = {
         productCount : 1,
+        color: "Green"
     }
     onIncrementClick() 
     {
@@ -25,7 +26,14 @@ class ProductListItem extends Component
             }
         ))
     }
-
+    changeColor()
+    {
+        this.setState((color) =>(
+            {
+                color: "Red"
+            }
+        ))
+    }
     render()
     {
 
@@ -44,6 +52,8 @@ class ProductListItem extends Component
             <div className="product-img">
                 <img src={image} alt=""/>
             </div>    
+            <p>Color {this.state.color}</p>
+            <button onClick = {()=>this.changeColor()}>Change Color</button>
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
             <div className="product-features">{type}</div>
